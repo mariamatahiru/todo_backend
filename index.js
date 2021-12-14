@@ -2,10 +2,11 @@ import dotenv from "dotenv";
 import express from 'express';
 import mongoose from 'mongoose';
 import TodoModel from './schemas/todo_schema.js';
+
 dotenv.config();
 const app =express();
 app.use(express.json());
-const db =process.env.DR_URL;
+const db =process.env.DB_URL;
 const port =process.env.PORT||5000
 
 mongoose.connect(db,{
